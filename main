@@ -1,0 +1,168 @@
+function start(){
+    buildCloud();
+    makeRainbow();
+    turnRight();
+    
+    move();
+    move();
+    turnLeft();
+}
+
+function buildCloud(){
+    for(var i = 0; i < 2; i++){
+	    paint(Color.cyan)
+	    move();
+    }
+    
+    paint(Color.cyan)
+    turnLeft();
+    move();
+    
+    turnLeft();
+    
+    for(var i = 0; i < 2; i++){
+	    paint(Color.cyan)
+	    move();
+    }
+    
+    paint(Color.cyan)
+    turnRight();
+    move();
+    
+    turnRight();
+}
+
+function makeRainbow(){
+    makeRed();
+    makeOrange();
+    makeYellow();
+    
+    makeGreen();
+    makeBlue();
+    makePurple();
+}
+
+function makeRed(){
+    for(var i = 0; i < 7; i++){
+	    paint(Color.red)
+	    move();
+	    turnLeft();
+	    
+	    move();
+	    turnRight();
+    }
+    paint(Color.red)
+    comeDown();
+}
+
+function makeOrange(){
+    move();
+    
+    for(var i = 0; i < 7; i++){
+	    paint(Color.orange)
+	    move();
+	    turnLeft();
+	    
+	    move();
+	    turnRight();
+    }
+    paint(Color.orange)
+    comeDown();
+}
+
+function makeYellow(){
+    move();
+    move();
+    
+    for(var i = 0; i < 7; i++){
+	    paint(Color.yellow)
+	    move();
+	    turnLeft();
+	    
+	    move();
+	    turnRight();
+    }
+    paint(Color.yellow)
+    comeDown();
+}
+
+function makeGreen(){
+    move();
+    move();
+    move();
+    
+    for(var i = 0; i < 6; i++){
+	    paint(Color.green)
+	    move();
+	    turnLeft();
+	    
+	    move();
+	    turnRight();
+    }
+    paint(Color.green)
+    comeDown();
+}
+
+function makeBlue(){
+    move();
+    move();
+    move();
+    
+    turnRight();
+    move();
+    turnLeft();
+    
+    for(var i = 0; i < 6; i++){
+	    paint(Color.blue)
+	    move();
+	    turnLeft();
+	    
+	    move();
+	    turnRight();
+    }
+    paint(Color.blue)
+    comeDown();
+}
+
+function makePurple(){
+    move();
+    move();
+    move();
+    
+    turnRight();
+    move();
+    move();
+    
+    turnLeft();
+    
+    for(var i = 0; i < 6; i++){
+	    paint(Color.purple)
+	    move();
+	    turnLeft();
+	    
+	    move();
+	    turnRight();
+    }
+    paint(Color.purple)
+    comeDown();
+}
+
+function comeDown(){
+    turnRight();
+    
+    while (frontIsClear()){
+        move();
+    }
+    
+    turnRight();
+    
+    while(frontIsClear()){
+        move();
+    }
+    
+    turnRight();
+    move();
+    move();
+    
+    turnRight();
+}
